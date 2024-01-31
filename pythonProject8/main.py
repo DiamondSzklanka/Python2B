@@ -40,7 +40,9 @@ print(LiczbyPierwsze)
 f = 0
 Kwadraty = []
 for i in range(len(Temperatury)):
-    if  math.sqrt(int(Temperatury[i])) == int:
+    AbsLT = abs(int(Temperatury[i]))
+    Sqrrt = math.sqrt(AbsLT)
+    if isinstance(Sqrrt, int):
         f += 1
         Kwadraty.append(Temperatury[i])
 print(f)

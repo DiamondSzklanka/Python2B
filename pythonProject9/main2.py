@@ -14,10 +14,13 @@ y = 0
 for i in range(5):
     z = Bin[i]
     for j in range(len(z)):
-        if z[j] == 0:
+        if z[j] == 0 or '0':
             x +=1
-        if z[j] == 1:
+        elif z[j] == 1 or '1':
             y += 1
-        else:
-            print("wtf")
-
+    if x > y:
+        print("ZERO")
+    elif y > x:
+        print("JEDEN")
+    elif y == x:
+        print("ROWNO")
